@@ -1,3 +1,5 @@
+$(document).ready(function () {
+
 // topics var 
 var topics = ["Food Wars", "Darling in Franxx", "My Hero Academia", "Log Horizon"]
 var button;
@@ -41,7 +43,7 @@ $("#buttonArea").on("click", ".btn", function(){
            var p = $("<p>").text("Rating: " + results[i].rating);
 
            // add a CSS style to the gifs
-           var topicImage = $("<img>").addClass("");
+           var topicImage = $("<img>").addClass("gifs");
 
            // animate and still which will be toggled 
            topicImage.attr("src", results[i].images.fixed_height_still.url);
@@ -99,3 +101,4 @@ buttonGenerator();
 
 
 buttonGenerator();
+});
