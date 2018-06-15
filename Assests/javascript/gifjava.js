@@ -35,7 +35,7 @@ $("#buttonArea").on("click", ".btn", function(){
 
         for (var i = 0; i < results.length; i++) {
             // a div is created to hold a gif of any topic
-            var topicDiv = $("<div>");
+            var topicDiv = $("<div>").addClass("col-lg-6 d-inline-block");
            
             // Under every gif, display its rating (PG, G, so on).
            var p = $("<p>");
@@ -43,7 +43,7 @@ $("#buttonArea").on("click", ".btn", function(){
            var p = $("<p>").text("Rating: " + results[i].rating);
 
            // add a CSS style to the gifs
-           var topicImage = $("<img>").addClass("gifs");
+           var topicImage = $("<img>").addClass("gifs img-fluid img-responsive");
 
            // animate and still which will be toggled 
            topicImage.attr("src", results[i].images.fixed_height_still.url);
